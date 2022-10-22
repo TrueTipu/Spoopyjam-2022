@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5bce73b248331d94882197e21eae1e9b, type: 3}
-  m_Name: new Cards
+  m_Name: Doctor1
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 701000417234860449e5c0a455c5d1c7, type: 3}
+  sprite: {fileID: 21300000, guid: 70b75fc8c07342349977cbf5c66b09db, type: 3}
   suit:
     bishop: 0
     doctor: 1

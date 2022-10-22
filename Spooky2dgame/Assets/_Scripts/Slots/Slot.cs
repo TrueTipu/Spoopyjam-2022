@@ -31,12 +31,7 @@ public class Slot : MonoBehaviour, IDroppable
         else
         {
             CardBlueprint.Suit _currentStatus = card.Data().GetSuit();
-            CardBlueprint.Suit _attackStatus = _card.Data().GetSuit();
-            if (((_currentStatus.bishop != 0 && _attackStatus.bishop != 0) ||
-                (_currentStatus.doctor != 0 && _attackStatus.doctor != 0) ||
-                (_currentStatus.hunter != 0 && _attackStatus.hunter != 0))
-                && card.Data().IsDarkSide() && !_card.Data().IsDarkSide()
-                && attackers.Contains(_card) == false)
+            if(CanAttack(_currentStatus, _card))
             {
                 Attack(_currentStatus, _card);
             }
@@ -49,10 +44,28 @@ public class Slot : MonoBehaviour, IDroppable
         }
 
     }
+    bool CanAttack(CardBlueprint.Suit _currentStatus, Card _card)
+    {
+        CardBlueprint.Suit _attackStatus = _card.Data().GetSuit();
+        return (((_currentStatus.bishop != 0 && _attackStatus.bishop != 0) ||
+            (_currentStatus.doctor != 0 && _attackStatus.doctor != 0) ||
+            (_currentStatus.hunter != 0 && _attackStatus.hunter != 0))
+            && card.Data().IsDarkSide() && !_card.Data().IsDarkSide()
+            && attackers.Contains(_card) == false);
+    }
 
     private void Attack(CardBlueprint.Suit _currentStatus, Card _mainAttacker)
     {
         CardBlueprint.Suit _defendStatus = new CardBlueprint.Suit(_currentStatus);
+
+
+        DragAndDropManager.Instance.dragNewCard += (_card, _slot) => {
+            if (!(_slot == this && CanAttack(card.Data().GetSuit(), _card))){
+                ClearAttackers(false);
+            }
+        };
+
+
         attackers.Add(_mainAttacker);
         foreach (Card _attacker in attackers)
         {
@@ -72,21 +85,29 @@ public class Slot : MonoBehaviour, IDroppable
 
         if (_defendStatus.doctor <= 0 && _defendStatus.hunter <= 0 && _defendStatus.bishop <= 0)
         {
-            card.gameObject.SetActive(false);
-            Clear();
+            ClearAttackers(true);
+            card.DestroyCard();
+            CardManager.Instance.UpdateWinCount();
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 
     public void Clear()
     {
         card = null;
         avaible = true;
+    }
+    private void ClearAttackers(bool delete)
+    {
+        foreach(Card _attacker in attackers)
+        {
+            //poista efekti
+            if (delete)
+            {
+                _attacker.DestroyCard();
+            }
+        }
         attackers = new List<Card>();
     }
 }

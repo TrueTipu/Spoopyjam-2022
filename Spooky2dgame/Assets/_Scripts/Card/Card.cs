@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-
+[System.Serializable]
 public class Card : MonoBehaviour
 {
     SpriteRenderer spriteRenderer;
@@ -26,7 +26,7 @@ public class Card : MonoBehaviour
         }
     }
 
-    void SetData(CardBlueprint _blueprintL, CardBlueprint _blueprintD)
+    public void SetData(CardBlueprint _blueprintL, CardBlueprint _blueprintD)
     {
         lightSide = _blueprintL;
         darkSide = _blueprintD;
@@ -71,6 +71,12 @@ public class Card : MonoBehaviour
         currentSlot = _slot;
     }
 
+    public void DestroyCard()
+    {
+        currentSlot.Clear();
+        currentSlot = null;
+        Destroy(gameObject);
+    }
 
     internal Sprite GetSprite()
     {

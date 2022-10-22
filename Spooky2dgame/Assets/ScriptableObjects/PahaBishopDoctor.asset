@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5bce73b248331d94882197e21eae1e9b, type: 3}
-  m_Name: 2
+  m_Name: PahaBishopDoctor
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: ce6125176b32b3e4f9fdf1c536a91cb4, type: 3}
   suit:
-    bishop: 0
+    bishop: 1
     doctor: 1
     hunter: 0
   darkSide: 1

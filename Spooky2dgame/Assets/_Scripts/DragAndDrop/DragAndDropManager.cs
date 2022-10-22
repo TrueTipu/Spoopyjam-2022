@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using UnityEngine.Events;
+using System;
 
 public class DragAndDropManager : MonoBehaviour
 {
@@ -13,6 +15,8 @@ public class DragAndDropManager : MonoBehaviour
 
     [SerializeField]
     float minDist;
+
+    public Action<Card, IDroppable> dragNewCard = (a, b) => { return; };
 
     public static DragAndDropManager Instance;
 
@@ -80,12 +84,17 @@ public class DragAndDropManager : MonoBehaviour
 
                 currentCard.gameObject.SetActive(true);
 
+                Debug.Log(dragNewCard + " " + currentCard + " " + _currentSlot);
+                dragNewCard.Invoke(currentCard, _currentSlot);
+                dragNewCard = (a, b) => { return; };
                 if (_currentSlot != null)
                 {
+                    
                     _currentSlot.Activate(currentCard);
-                }             
-                currentCard = null;
+                }
 
+                currentCard = null;
+                
             }
         }
     }
