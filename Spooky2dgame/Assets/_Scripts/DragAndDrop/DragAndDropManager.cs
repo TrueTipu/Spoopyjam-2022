@@ -23,6 +23,8 @@ public class DragAndDropManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        customCursor = GameObject.FindGameObjectWithTag("Cursor").GetComponent<Image>();
+        customCursor.gameObject.SetActive(false);
     }
 
     private void Start()

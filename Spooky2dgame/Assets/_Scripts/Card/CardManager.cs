@@ -26,6 +26,9 @@ public class CardManager : MonoBehaviour
     {
         Instance = this;
         GenerateCards();
+
+        winCountText.text = winCount.ToString();
+        deckCountText.text = deckCount.ToString();
     }
 
     void GenerateCards()
@@ -33,8 +36,9 @@ public class CardManager : MonoBehaviour
 
         while(dCards.Count > 0)
         {
-            CardBlueprint _lCard = lCards[Random.Range(0, lCards.Count - 1)];
-            CardBlueprint _dCard = dCards[Random.Range(0, dCards.Count - 1)];
+            int r = Random.Range(0, lCards.Count);
+            CardBlueprint _lCard = lCards[Random.Range(0, lCards.Count)];
+            CardBlueprint _dCard = dCards[Random.Range(r, dCards.Count)];
             lCards.Remove(_lCard);
             dCards.Remove(_dCard);
 
