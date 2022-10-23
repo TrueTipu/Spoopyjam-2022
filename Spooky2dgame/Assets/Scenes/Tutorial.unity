@@ -1130,7 +1130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1568582597
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1170,7 +1170,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Draw cards with left click or space
+  m_text: Draw cards with left click or space (draw 3 cards to continue)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9de60a4935cfd634cbc0e67af37464ef, type: 2}
   m_sharedMaterial: {fileID: 4247770308463786601, guid: 9de60a4935cfd634cbc0e67af37464ef, type: 2}
@@ -1197,7 +1197,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 121.65
+  m_fontSize: 80.95
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
