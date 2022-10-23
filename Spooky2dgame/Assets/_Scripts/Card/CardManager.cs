@@ -22,6 +22,10 @@ public class CardManager : MonoBehaviour
 
     public static CardManager Instance;
 
+    public float cardsDrawn = 0;
+    public float cardsWon = 0;
+    public bool random = true;
+
 
     private void Awake()
     {
@@ -34,21 +38,40 @@ public class CardManager : MonoBehaviour
 
     void GenerateCards()
     {
-
-        while(dCards.Count > 0)
+        if (random)
         {
-            int r = Random.Range(0, lCards.Count);
-            CardBlueprint _lCard = lCards[Random.Range(0, lCards.Count)];
-            CardBlueprint _dCard = dCards[Random.Range(r, dCards.Count)];
-            lCards.Remove(_lCard);
-            dCards.Remove(_dCard);
+            while (dCards.Count > 0)
+            {
+                int r = Random.Range(0, lCards.Count);
+                CardBlueprint _lCard = lCards[Random.Range(0, lCards.Count)];
+                CardBlueprint _dCard = dCards[Random.Range(r, dCards.Count)];
+                lCards.Remove(_lCard);
+                dCards.Remove(_dCard);
 
-            Card _newCard = Instantiate(cardObject, this.transform).GetComponent<Card>();
-            _newCard.SetData(_lCard, _dCard);
-            _newCard.gameObject.SetActive(false);
+                Card _newCard = Instantiate(cardObject, this.transform).GetComponent<Card>();
+                _newCard.SetData(_lCard, _dCard);
+                _newCard.gameObject.SetActive(false);
 
-            deck.Add(_newCard);
+                deck.Add(_newCard);
+            }
         }
+        else
+        {
+            while (dCards.Count > 0)
+            {
+                CardBlueprint _lCard = lCards[0];
+                CardBlueprint _dCard = dCards[0];
+                lCards.Remove(_lCard);
+                dCards.Remove(_dCard);
+
+                Card _newCard = Instantiate(cardObject, this.transform).GetComponent<Card>();
+                _newCard.SetData(_lCard, _dCard);
+                _newCard.gameObject.SetActive(false);
+
+                deck.Add(_newCard);
+            }
+        }
+
         deckCount = deck.Count;
     }
 
@@ -81,12 +104,14 @@ public class CardManager : MonoBehaviour
     public void UpdateDeckCount()
     {
         AudioManager.instance.Play("Deck");
+        cardsDrawn++;
         deckCount = deck.Count;
         deckCountText.text = deckCount.ToString();
     }
     public void UpdateWinCount()
     {
         winCount--;
+        cardsWon++;
         if(winCount == 0)
         {
             CanvasManager.Instance.Invoke("Win", 2.5f);

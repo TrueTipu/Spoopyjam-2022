@@ -81,6 +81,11 @@ public class Card : MonoBehaviour
 
             AudioManager.instance.Play("Flip");
 
+            if(TutorialScript.Instance != null)
+            {
+                TutorialScript.Instance.flip++;
+            }
+
             Destroy(particlesI, 5);
             flipped = true;
             animator.SetBool("Dark", true);

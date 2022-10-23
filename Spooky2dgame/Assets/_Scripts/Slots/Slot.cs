@@ -163,7 +163,7 @@ public class Slot : MonoBehaviour, IDroppable
 
             GameObject particlesI = Instantiate(particles, transform.position, transform.rotation);
             Destroy(particlesI, 5);
-
+            AudioManager.instance.Play("Tappo");
 
             CardManager.Instance.UpdateWinCount();
         }

@@ -20,6 +20,8 @@ public class DragAndDropManager : MonoBehaviour
 
     public static DragAndDropManager Instance;
 
+    public int cardsSiirtynyt = 0;
+
     private void Awake()
     {
         Instance = this;
@@ -94,6 +96,7 @@ public class DragAndDropManager : MonoBehaviour
                     
                     _currentSlot.Activate(currentCard);
                     AudioManager.instance.Play("Siirto");
+                    cardsSiirtynyt++;
                 }
 
                 currentCard = null;

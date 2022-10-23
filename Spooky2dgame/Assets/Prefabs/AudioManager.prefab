@@ -86,3 +86,10 @@ MonoBehaviour:
     stereo: 0
     loop: 1
     source: {fileID: 0}
+  - name: Tappo
+    clip: {fileID: 8300000, guid: 7d0684cebef54b049b111867c99327b2, type: 3}
+    volume: 1
+    pitch: 1
+    stereo: 0
+    loop: 0
+    source: {fileID: 0}
