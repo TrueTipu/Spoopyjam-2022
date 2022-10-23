@@ -71,6 +71,7 @@ public class CardManager : MonoBehaviour
         {
             DrawCard();
         }
+        
     }
     public void UpdateDeckCount()
     {
@@ -82,7 +83,7 @@ public class CardManager : MonoBehaviour
         winCount--;
         if(winCount == 0)
         {
-            //voitit
+            CanvasManager.Instance.Win();
         }
         winCountText.text = winCount.ToString();
     }
