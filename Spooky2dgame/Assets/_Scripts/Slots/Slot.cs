@@ -17,6 +17,11 @@ public class Slot : MonoBehaviour, IDroppable
 
     public bool Active { get { return true; } set { return; } }
 
+
+    [SerializeField] List<SpriteRenderer> images;
+
+    [SerializeField] Dictionary<SuitForImages, Sprite> suitImages;
+
     public void Activate(Card _card)
     {
         if (avaible)
@@ -52,6 +57,43 @@ public class Slot : MonoBehaviour, IDroppable
             (_currentStatus.hunter != 0 && _attackStatus.hunter != 0))
             && card.Data().IsDarkSide() && !_card.Data().IsDarkSide()
             && attackers.Contains(_card) == false);
+    }
+
+    private void Update()
+    {
+        List<SuitForImages> _suits = new List<SuitForImages>();
+        foreach (Card _attacker in attackers)
+        {
+            if (_attacker.Data().GetSuit().doctor != 0)
+            {
+                _suits.Add(SuitForImages.doctor);
+            }
+            if (_attacker.Data().GetSuit().hunter != 0)
+            {
+                _suits.Add(SuitForImages.hunter);
+            }
+            if (_attacker.Data().GetSuit().bishop != 0)
+            {
+               _suits.Add(SuitForImages.bishop);
+            }
+        }
+        int i = 0;
+        foreach (SuitForImages _suit in _suits)
+        {
+            images[i].gameObject.SetActive(true);
+            images[i].sprite = suitImages[_suit];
+            i++;
+            if(i >= images.Count)
+            {
+                break;
+            }
+        }
+    }
+    enum SuitForImages
+    {
+        bishop,
+        doctor,
+        hunter
     }
 
     private void Attack(CardBlueprint.Suit _currentStatus, Card _mainAttacker)

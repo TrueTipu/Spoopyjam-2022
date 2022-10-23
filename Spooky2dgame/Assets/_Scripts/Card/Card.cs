@@ -7,7 +7,11 @@ using UnityEngine;
 [System.Serializable]
 public class Card : MonoBehaviour
 {
-    SpriteRenderer spriteRenderer;
+    [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] SpriteRenderer dSpriteRenderer;
+    [SerializeField] Animator animator;
+
+
     [SerializeField] CardBlueprint lightSide;
     [SerializeField] CardBlueprint darkSide;
 
@@ -18,9 +22,9 @@ public class Card : MonoBehaviour
     private void Awake()
     {
         currentSlot = null;
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        
-        if(lightSide != null && darkSide != null)
+
+
+        if (lightSide != null && darkSide != null)
         {
             SetData(lightSide, darkSide);
         }
@@ -31,6 +35,7 @@ public class Card : MonoBehaviour
         lightSide = _blueprintL;
         darkSide = _blueprintD;
         spriteRenderer.sprite = lightSide.GetSprite();
+        dSpriteRenderer.sprite = darkSide.GetSprite();
     }
 
     public CardBlueprint Data()
@@ -61,7 +66,7 @@ public class Card : MonoBehaviour
         if (!flipped)
         {
             flipped = true;
-            spriteRenderer.sprite = darkSide.GetSprite();
+            animator.SetBool("Dark", true);
         }
     }
 
