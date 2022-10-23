@@ -11,6 +11,10 @@ GameObject:
   - component: {fileID: 4546728245898145370}
   - component: {fileID: 4546728245898145365}
   - component: {fileID: 4546728245898145371}
+  - component: {fileID: 1467665830}
+  - component: {fileID: 1467665832}
+  - component: {fileID: 1467665831}
+  - component: {fileID: 8363659061928263156}
   m_Layer: 0
   m_Name: "TestiYksil\xF6"
   m_TagString: Untagged
@@ -74,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 70b75fc8c07342349977cbf5c66b09db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -84,7 +88,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 2
   m_SpriteSortPoint: 0
 --- !u!331 &4546728245898145371
 SpriteMask:
@@ -129,14 +133,88 @@ SpriteMask:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f395d6c481be71346bdc837fe023c026, type: 3}
   m_MaskAlphaCutoff: 0
-  m_FrontSortingLayerID: 325267185
-  m_BackSortingLayerID: -1827848907
-  m_FrontSortingLayer: 2
-  m_BackSortingLayer: 1
+  m_FrontSortingLayerID: 1891691153
+  m_BackSortingLayerID: 325267185
+  m_FrontSortingLayer: 3
+  m_BackSortingLayer: 2
   m_FrontSortingOrder: 0
   m_BackSortingOrder: 0
   m_IsCustomRangeActive: 1
   m_SpriteSortPoint: 0
+--- !u!95 &1467665830
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4546728245898145364}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2f1e76afc5aed7f458db1eab7ddb45a5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1467665832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4546728245898145364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b56a12f8d91d4d4fbc43a03a9739bcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 4546728245898145365}
+  dSpriteRenderer: {fileID: 4546728246541708385}
+  animator: {fileID: 1467665830}
+  lightSide: {fileID: 0}
+  darkSide: {fileID: 0}
+--- !u!61 &1467665831
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4546728245898145364}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.7692307, y: 2.4615386}
+    newSize: {x: 1.7692307, y: 2.4615386}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.7692307, y: 2.4615386}
+  m_EdgeRadius: 0
+--- !u!114 &8363659061928263156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4546728245898145364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc4ac43b90c1c84cb777d4a472f0717, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4546728246541708387
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,7 +226,7 @@ GameObject:
   - component: {fileID: 4546728246541708384}
   - component: {fileID: 4546728246541708385}
   m_Layer: 0
-  m_Name: Undead
+  m_Name: DarkSide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -206,8 +284,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1827848907
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f395d6c481be71346bdc837fe023c026, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -218,7 +296,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 1
+  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &4546728246688932106
 GameObject:
@@ -232,7 +310,7 @@ GameObject:
   - component: {fileID: 4546728246688932105}
   - component: {fileID: 4546728246688932104}
   m_Layer: 0
-  m_Name: Untitled 10-23-2022 01-35-17
+  m_Name: Mask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -245,13 +323,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4546728246688932106}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.15377831, y: -1.7692308, z: 0.0045640497}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.5769231, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4546728245898145370}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4546728246688932105
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -290,8 +368,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 325267185
-  m_SortingLayer: 2
+  m_SortingLayerID: 1891691153
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2c9b175a909a2224999a6a5aec147b87, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -347,9 +425,9 @@ SpriteMask:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d1bf753a78da1a04c81cf4562d1e2901, type: 3}
   m_MaskAlphaCutoff: 0
-  m_FrontSortingLayerID: -1827848907
+  m_FrontSortingLayerID: 325267185
   m_BackSortingLayerID: 0
-  m_FrontSortingLayer: 1
+  m_FrontSortingLayer: 2
   m_BackSortingLayer: 0
   m_FrontSortingOrder: 0
   m_BackSortingOrder: 0
