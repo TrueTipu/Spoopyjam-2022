@@ -255,7 +255,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1555681458 stripped
 MonoBehaviour:
@@ -296,7 +296,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1606925918
 PrefabInstance:
@@ -307,7 +307,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3909725458227243068, guid: 717fbcb1fca851348bbaab43531a83c3, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3909725458227243068, guid: 717fbcb1fca851348bbaab43531a83c3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -372,7 +372,7 @@ PrefabInstance:
       objectReference: {fileID: 1555681458}
     - target: {fileID: 4387446954380389229, guid: d9084ba0ab7bffa4687a0e16a447a730, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4387446954380389229, guid: d9084ba0ab7bffa4687a0e16a447a730, type: 3}
       propertyPath: m_LocalPosition.x
@@ -418,6 +418,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mechanics (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4387446954617099138, guid: d9084ba0ab7bffa4687a0e16a447a730, type: 3}
+      propertyPath: particles
+      value: 
+      objectReference: {fileID: 4670075252334125549, guid: d7a73ce2d47a3f546a041df2ba07b315, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9084ba0ab7bffa4687a0e16a447a730, type: 3}
 --- !u!1 &1765514152
@@ -525,7 +529,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2216632439912385130
 PrefabInstance:
@@ -552,7 +556,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2216632440119767512, guid: ffbb27f4e208cfe4190ea82dc27a089e, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2216632440119767512, guid: ffbb27f4e208cfe4190ea82dc27a089e, type: 3}
       propertyPath: m_AnchorMax.x

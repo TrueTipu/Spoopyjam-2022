@@ -19,6 +19,9 @@ public class Card : MonoBehaviour
 
     Slot currentSlot;
 
+    [SerializeField] GameObject particles;
+
+
     private void Awake()
     {
         currentSlot = null;
@@ -74,6 +77,8 @@ public class Card : MonoBehaviour
     {
         if (!flipped)
         {
+            GameObject particlesI = Instantiate(particles, transform.position, transform.rotation);
+            Destroy(particlesI, 5);
             flipped = true;
             animator.SetBool("Dark", true);
         }
@@ -105,5 +110,15 @@ public class Card : MonoBehaviour
             return darkSide.GetSprite();
         }
 
+    }
+
+    internal void HighLight()
+    {
+        currentSlot.particles2.SetActive(true);
+    }
+
+    internal void DisableHighlight()
+    {
+        currentSlot.particles2.SetActive(false);
     }
 }

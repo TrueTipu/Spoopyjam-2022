@@ -22,6 +22,7 @@ public class CardManager : MonoBehaviour
 
     public static CardManager Instance;
 
+
     private void Awake()
     {
         Instance = this;
@@ -87,7 +88,7 @@ public class CardManager : MonoBehaviour
         winCount--;
         if(winCount == 0)
         {
-            CanvasManager.Instance.Win();
+            CanvasManager.Instance.Invoke("Win", 2.5f);
         }
         winCountText.text = winCount.ToString();
     }

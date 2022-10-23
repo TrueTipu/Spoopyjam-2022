@@ -177,6 +177,7 @@ MonoBehaviour:
   animator: {fileID: 1467665830}
   lightSide: {fileID: 0}
   darkSide: {fileID: 0}
+  particles: {fileID: 8153486802579187456, guid: 111c8557ee7b33549b623a5f389662a5, type: 3}
 --- !u!61 &1467665831
 BoxCollider2D:
   m_ObjectHideFlags: 0

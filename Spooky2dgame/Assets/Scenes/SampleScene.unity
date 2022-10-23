@@ -544,6 +544,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4387446952935843000, guid: d9084ba0ab7bffa4687a0e16a447a730, type: 3}
+      propertyPath: winCountText
+      value: 
+      objectReference: {fileID: 1846774507}
+    - target: {fileID: 4387446952935843000, guid: d9084ba0ab7bffa4687a0e16a447a730, type: 3}
+      propertyPath: deckCountText
+      value: 
+      objectReference: {fileID: 2015400630}
+    - target: {fileID: 4387446952935843000, guid: d9084ba0ab7bffa4687a0e16a447a730, type: 3}
+      propertyPath: dCards.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4387446952935843000, guid: d9084ba0ab7bffa4687a0e16a447a730, type: 3}
+      propertyPath: dCards.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 54838f241f3619b40b83a57d8e4e98d5, type: 2}
+    - target: {fileID: 4387446952935843000, guid: d9084ba0ab7bffa4687a0e16a447a730, type: 3}
+      propertyPath: dCards.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 54838f241f3619b40b83a57d8e4e98d5, type: 2}
+    - target: {fileID: 4387446952935843000, guid: d9084ba0ab7bffa4687a0e16a447a730, type: 3}
+      propertyPath: dCards.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 54838f241f3619b40b83a57d8e4e98d5, type: 2}
+    - target: {fileID: 4387446952935843000, guid: d9084ba0ab7bffa4687a0e16a447a730, type: 3}
+      propertyPath: dCards.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 54838f241f3619b40b83a57d8e4e98d5, type: 2}
+    - target: {fileID: 4387446952935843000, guid: d9084ba0ab7bffa4687a0e16a447a730, type: 3}
+      propertyPath: dCards.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 54838f241f3619b40b83a57d8e4e98d5, type: 2}
+    - target: {fileID: 4387446952935843000, guid: d9084ba0ab7bffa4687a0e16a447a730, type: 3}
+      propertyPath: dCards.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 54838f241f3619b40b83a57d8e4e98d5, type: 2}
+    - target: {fileID: 4387446952935843000, guid: d9084ba0ab7bffa4687a0e16a447a730, type: 3}
+      propertyPath: dCards.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 54838f241f3619b40b83a57d8e4e98d5, type: 2}
+    - target: {fileID: 4387446952935843000, guid: d9084ba0ab7bffa4687a0e16a447a730, type: 3}
+      propertyPath: dCards.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: 54838f241f3619b40b83a57d8e4e98d5, type: 2}
+    - target: {fileID: 4387446952935843000, guid: d9084ba0ab7bffa4687a0e16a447a730, type: 3}
+      propertyPath: dCards.Array.data[8]
+      value: 
+      objectReference: {fileID: 11400000, guid: 54838f241f3619b40b83a57d8e4e98d5, type: 2}
     - target: {fileID: 4387446954380389229, guid: d9084ba0ab7bffa4687a0e16a447a730, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -594,3 +642,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9084ba0ab7bffa4687a0e16a447a730, type: 3}
+--- !u!114 &1846774507 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2216632440640400006, guid: ffbb27f4e208cfe4190ea82dc27a089e, type: 3}
+  m_PrefabInstance: {fileID: 1212417593}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2015400630 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2216632440299573023, guid: ffbb27f4e208cfe4190ea82dc27a089e, type: 3}
+  m_PrefabInstance: {fileID: 1212417593}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

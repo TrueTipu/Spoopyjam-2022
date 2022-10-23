@@ -22,6 +22,9 @@ public class Slot : MonoBehaviour, IDroppable
 
     [SerializeField] List<Sprite> suitImages;
 
+    [SerializeField] GameObject particles;
+    [SerializeField] public GameObject particles2;
+
     public void Activate(Card _card)
     {
         if (avaible)
@@ -51,10 +54,28 @@ public class Slot : MonoBehaviour, IDroppable
     }
     bool CanAttack(CardBlueprint.Suit _currentStatus, Card _card)
     {
+        CardBlueprint.Suit _defendStatus = new CardBlueprint.Suit(_currentStatus);
+
+        foreach (Card _attacker in attackers)
+        {
+            if (_attacker.Data().GetSuit().doctor != 0)
+            {
+                _defendStatus.doctor -= _attacker.Data().GetSuit().doctor;
+            }
+            if (_attacker.Data().GetSuit().hunter != 0)
+            {
+                _defendStatus.hunter -= _attacker.Data().GetSuit().hunter;
+            }
+            if (_attacker.Data().GetSuit().bishop != 0)
+            {
+                _defendStatus.bishop -= _attacker.Data().GetSuit().bishop;
+            }
+        }
+
         CardBlueprint.Suit _attackStatus = _card.Data().GetSuit();
-        return (((_currentStatus.bishop != 0 && _attackStatus.bishop != 0) ||
-            (_currentStatus.doctor != 0 && _attackStatus.doctor != 0) ||
-            (_currentStatus.hunter != 0 && _attackStatus.hunter != 0))
+        return (((_defendStatus.bishop != 0 && _attackStatus.bishop != 0) ||
+            (_defendStatus.doctor != 0 && _attackStatus.doctor != 0) ||
+            (_defendStatus.hunter != 0 && _attackStatus.hunter != 0))
             && card.Data().IsDarkSide() && !_card.Data().IsDarkSide()
             && attackers.Contains(_card) == false);
     }
@@ -109,10 +130,13 @@ public class Slot : MonoBehaviour, IDroppable
 
 
         DragAndDropManager.Instance.dragNewCard += (_card, _slot) => {
+            if (card == null) { ClearAttackers(false); return; }
             if (!(_slot == this && CanAttack(card.Data().GetSuit(), _card))){
                 ClearAttackers(false);
             }
         };
+
+        _mainAttacker.HighLight();
 
 
         attackers.Add(_mainAttacker);
@@ -136,6 +160,11 @@ public class Slot : MonoBehaviour, IDroppable
         {
             ClearAttackers(true);
             card.DestroyCard();
+
+            GameObject particlesI = Instantiate(particles, transform.position, transform.rotation);
+            Destroy(particlesI, 5);
+
+
             CardManager.Instance.UpdateWinCount();
         }
     }
@@ -151,7 +180,7 @@ public class Slot : MonoBehaviour, IDroppable
     {
         foreach(Card _attacker in attackers)
         {
-            //poista efekti
+            _attacker.DisableHighlight();
             if (delete)
             {
                 _attacker.DestroyCard();

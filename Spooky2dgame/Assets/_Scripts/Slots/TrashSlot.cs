@@ -5,6 +5,8 @@ using UnityEngine;
 public class TrashSlot : MonoBehaviour, IDroppable
 {
 
+    [SerializeField] GameObject particles;
+
     public Vector3 Position { get { return transform.position; } set { return; } }
 
     public bool Active { get { return true; } set { return; } }
@@ -13,6 +15,7 @@ public class TrashSlot : MonoBehaviour, IDroppable
     {
         _card.gameObject.SetActive(false);
         _card.DestroyCard();
-
+        GameObject particlesI = Instantiate(particles, transform.position, transform.rotation);
+        Destroy(particlesI, 5);
     }
 }
