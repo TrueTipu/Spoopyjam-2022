@@ -342,7 +342,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Win level by killing enough enemies. Retry from top right corner (this
+    is very usefull in harder levels).
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9de60a4935cfd634cbc0e67af37464ef, type: 2}
   m_sharedMaterial: {fileID: 4247770308463786601, guid: 9de60a4935cfd634cbc0e67af37464ef, type: 2}
