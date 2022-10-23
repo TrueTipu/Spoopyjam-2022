@@ -704,16 +704,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2216632439260160953, guid: ffbb27f4e208cfe4190ea82dc27a089e, type: 3}
-      propertyPath: m_text
-      value: 'Retry
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 2216632439354622533, guid: ffbb27f4e208cfe4190ea82dc27a089e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2216632440119767495, guid: ffbb27f4e208cfe4190ea82dc27a089e, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -806,9 +796,5 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 302734505}
-    - target: {fileID: 5924831475062255819, guid: ffbb27f4e208cfe4190ea82dc27a089e, type: 3}
-      propertyPath: m_text
-      value: Next level
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffbb27f4e208cfe4190ea82dc27a089e, type: 3}

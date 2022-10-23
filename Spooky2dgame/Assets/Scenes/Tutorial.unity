@@ -1037,7 +1037,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You can destroy cards by dragging them in the bottom right corner
+  m_text: You can destroy cards by dragging them in the bottom right corner. dark
+    cards cannot be destroyed.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9de60a4935cfd634cbc0e67af37464ef, type: 2}
   m_sharedMaterial: {fileID: 4247770308463786601, guid: 9de60a4935cfd634cbc0e67af37464ef, type: 2}
@@ -1305,7 +1306,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Right click to flip cards
+  m_text: Right click to flip cards and reveal what's hiding in the dark.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9de60a4935cfd634cbc0e67af37464ef, type: 2}
   m_sharedMaterial: {fileID: 4247770308463786601, guid: 9de60a4935cfd634cbc0e67af37464ef, type: 2}
