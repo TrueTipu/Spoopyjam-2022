@@ -20,7 +20,7 @@ public class Slot : MonoBehaviour, IDroppable
 
     [SerializeField] List<SpriteRenderer> images;
 
-    [SerializeField] Dictionary<SuitForImages, Sprite> suitImages;
+    [SerializeField] List<Sprite> suitImages;
 
     public void Activate(Card _card)
     {
@@ -61,6 +61,13 @@ public class Slot : MonoBehaviour, IDroppable
 
     private void Update()
     {
+        if(attackers.Count == 0)
+        {
+            for (int j = 0; j < images.Count; j++)
+            {
+                images[j].gameObject.SetActive(false);
+            }
+        }
         List<SuitForImages> _suits = new List<SuitForImages>();
         foreach (Card _attacker in attackers)
         {
@@ -81,7 +88,7 @@ public class Slot : MonoBehaviour, IDroppable
         foreach (SuitForImages _suit in _suits)
         {
             images[i].gameObject.SetActive(true);
-            images[i].sprite = suitImages[_suit];
+            images[i].sprite = suitImages[(int)_suit];
             i++;
             if(i >= images.Count)
             {

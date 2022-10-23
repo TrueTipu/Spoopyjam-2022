@@ -30,6 +30,15 @@ public class Card : MonoBehaviour
         }
     }
 
+
+    private void OnEnable()
+    {
+        if (flipped)
+        {
+            animator.SetBool("Darker", true);
+        }
+    }
+
     public void SetData(CardBlueprint _blueprintL, CardBlueprint _blueprintD)
     {
         lightSide = _blueprintL;
@@ -76,6 +85,8 @@ public class Card : MonoBehaviour
         currentSlot = _slot;
     }
 
+
+
     public void DestroyCard()
     {
         currentSlot.Clear();
@@ -85,6 +96,14 @@ public class Card : MonoBehaviour
 
     internal Sprite GetSprite()
     {
-        return spriteRenderer.sprite;
+        if (!flipped)
+        {
+            return lightSide.GetSprite();
+        }
+        else
+        {
+            return darkSide.GetSprite();
+        }
+
     }
 }
