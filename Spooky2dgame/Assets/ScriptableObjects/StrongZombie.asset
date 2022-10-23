@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bce73b248331d94882197e21eae1e9b, type: 3}
   m_Name: StrongZombie
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: ba5880376483260489d6458dc742dc95, type: 3}
   suit:
     bishop: 0
-    doctor: 0
+    doctor: 2
     hunter: 0
-  darkSide: 0
+  darkSide: 1
