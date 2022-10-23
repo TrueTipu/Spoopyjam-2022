@@ -15,6 +15,11 @@ public class Card : MonoBehaviour
     [SerializeField] CardBlueprint lightSide;
     [SerializeField] CardBlueprint darkSide;
 
+    public bool Flipped()
+    {
+        return flipped;
+    }
+
     bool flipped;
 
     Slot currentSlot;
