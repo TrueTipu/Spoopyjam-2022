@@ -549,15 +549,19 @@ PrefabInstance:
     - target: {fileID: 4387446952935843000, guid: d9084ba0ab7bffa4687a0e16a447a730, type: 3}
       propertyPath: dCards.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 5fbe2ea2b38e9644892a87aaf61f645f, type: 2}
+      objectReference: {fileID: 11400000, guid: 253a05b80d526b54d8d32c73ddd481a7, type: 2}
     - target: {fileID: 4387446952935843000, guid: d9084ba0ab7bffa4687a0e16a447a730, type: 3}
       propertyPath: dCards.Array.data[2]
       value: 
       objectReference: {fileID: 11400000, guid: 5fbe2ea2b38e9644892a87aaf61f645f, type: 2}
     - target: {fileID: 4387446952935843000, guid: d9084ba0ab7bffa4687a0e16a447a730, type: 3}
-      propertyPath: dCards.Array.data[5]
+      propertyPath: dCards.Array.data[4]
       value: 
       objectReference: {fileID: 11400000, guid: 244362a72c4051647b121670acca149a, type: 2}
+    - target: {fileID: 4387446952935843000, guid: d9084ba0ab7bffa4687a0e16a447a730, type: 3}
+      propertyPath: dCards.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: a2f72de0af7add846bbe4b2dccde03bd, type: 2}
     - target: {fileID: 4387446952935843000, guid: d9084ba0ab7bffa4687a0e16a447a730, type: 3}
       propertyPath: dCards.Array.data[6]
       value: 
@@ -593,7 +597,7 @@ PrefabInstance:
     - target: {fileID: 4387446952935843000, guid: d9084ba0ab7bffa4687a0e16a447a730, type: 3}
       propertyPath: dCards.Array.data[11]
       value: 
-      objectReference: {fileID: 11400000, guid: 1a967895f466c4c4bbed9e0d168795ba, type: 2}
+      objectReference: {fileID: 11400000, guid: 4ea94b49c40526e48a0bcb9362d1502b, type: 2}
     - target: {fileID: 4387446952935843000, guid: d9084ba0ab7bffa4687a0e16a447a730, type: 3}
       propertyPath: lCards.Array.data[10]
       value: 
