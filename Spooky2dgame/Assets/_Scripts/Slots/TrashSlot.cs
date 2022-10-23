@@ -16,6 +16,7 @@ public class TrashSlot : MonoBehaviour, IDroppable
         _card.gameObject.SetActive(false);
         _card.DestroyCard();
         GameObject particlesI = Instantiate(particles, transform.position, transform.rotation);
+        AudioManager.instance.Play("Destroy");
         Destroy(particlesI, 5);
     }
 }

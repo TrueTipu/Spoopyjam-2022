@@ -230,6 +230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4a73c6ed435cac43abf5df034aaaa50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particles: {fileID: 4670075252334125549, guid: d7a73ce2d47a3f546a041df2ba07b315, type: 3}
 --- !u!1001 &4387446953903039180
 PrefabInstance:
   m_ObjectHideFlags: 0

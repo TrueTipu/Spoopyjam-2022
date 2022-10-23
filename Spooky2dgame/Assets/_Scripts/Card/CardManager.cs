@@ -80,6 +80,7 @@ public class CardManager : MonoBehaviour
     }
     public void UpdateDeckCount()
     {
+        AudioManager.instance.Play("Deck");
         deckCount = deck.Count;
         deckCountText.text = deckCount.ToString();
     }

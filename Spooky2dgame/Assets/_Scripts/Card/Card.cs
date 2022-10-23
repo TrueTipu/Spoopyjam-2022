@@ -78,6 +78,9 @@ public class Card : MonoBehaviour
         if (!flipped)
         {
             GameObject particlesI = Instantiate(particles, transform.position, transform.rotation);
+
+            AudioManager.instance.Play("Flip");
+
             Destroy(particlesI, 5);
             flipped = true;
             animator.SetBool("Dark", true);

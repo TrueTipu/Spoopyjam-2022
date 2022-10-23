@@ -93,6 +93,7 @@ public class DragAndDropManager : MonoBehaviour
                 {
                     
                     _currentSlot.Activate(currentCard);
+                    AudioManager.instance.Play("Siirto");
                 }
 
                 currentCard = null;

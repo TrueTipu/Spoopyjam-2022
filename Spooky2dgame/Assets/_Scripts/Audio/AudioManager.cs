@@ -30,11 +30,13 @@ public class AudioManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
+
+
     }
 
     void Start()
     {
-        //Play("Musiikki");
+        Play("Musiikki");
     }
 
 
