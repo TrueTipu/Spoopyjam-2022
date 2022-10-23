@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bce73b248331d94882197e21eae1e9b, type: 3}
   m_Name: StrongVampire
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: cf8434890c143f145976c08549ed3418, type: 3}
   suit:
-    bishop: 0
+    bishop: 2
     doctor: 0
     hunter: 0
-  darkSide: 0
+  darkSide: 1
